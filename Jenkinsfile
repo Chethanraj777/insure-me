@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Clone') {
-      steps {
-        git 'https://github.com/Chethanraj777/insure-me.git'
-      }
-    }
+   stage('Clone') {
+  steps {
+    git branch: 'main', url: 'https://github.com/Chethanraj777/insure-me.git'
+  }
+}
     stage('Build') {
       steps {
         sh 'mvn clean install'
